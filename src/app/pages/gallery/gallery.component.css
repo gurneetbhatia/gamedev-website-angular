@@ -1,3 +1,10 @@
 .albums img {
     width: 300px;
+    height: auto;
+    box-shadow: 10px 5px 5px #8d64c6;
+    transition: transform .3s;
+}
+
+.albums img:hover {
+    transform: scale(1.05);
 }
