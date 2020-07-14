@@ -27,12 +27,6 @@ export class DataService {
       location: "Kilburn",
       url: "https://facebook.com"
     },
-    {
-      title: "Event4",
-      datetime: new Date(2020, 6, 23, 12, 0),
-      location: "Kilburn",
-      url: "https://facebook.com"
-    }
   ];
 
   constructor() { }

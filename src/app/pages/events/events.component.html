@@ -15,6 +15,11 @@
             <div *ngFor="let event of upcomingEvents">
                 <app-event-card [event]="event"></app-event-card>
             </div>
+            <div *ngIf="upcomingEvents.length === 0">
+                <div class="alert alert-info">
+                    No upcoming events right now but follow our Facebook to stay tuned!
+                </div>
+            </div>
         </section>
         <section align="center" id="past-events" class="col-md events-section">
             <h2>Past Events</h2>
