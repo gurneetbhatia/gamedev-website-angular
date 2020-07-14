@@ -1,0 +1,68 @@
+.box {
+    position: relative;
+  }
+  
+  #home .box .img-text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    top: 60%;
+    text-align: center;
+    width: 55%;
+    font-size: 20px;
+    font-weight: bolder;
+    color: gray;
+  }
+  
+  #home-img {
+    width: 100%;
+  }
+  
+  #about-us {
+    background-color: #FF9A75;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  #about-us h1 {
+    font-weight: bolder;
+  }
+  
+  #wave {
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  #wave svg{
+    height: 100%;
+    width: 100%
+  }
+  
+  #wave path {
+    stroke: none;
+    fill: #FF9A75;
+  }
+  
+  #team {
+    padding-top: 20px;
+  }
+  
+  .team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .member-name {
+    font-weight: bold;
+    font-size: 23px;
+  }
+  
+  .member-role {
+    font-weight: bold;
+    font-size: 20px;
+    color: gray;
+  }
+  
