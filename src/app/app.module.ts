@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { EventsComponent } from './pages/events/events.component';
 import { EventCardComponent } from './pages/events/event-card.component';
 import { TutorialsComponent } from './pages/tutorials/tutorials.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TutorialsComponent } from './pages/tutorials/tutorials.component';
     HomeComponent,
     EventsComponent,
     EventCardComponent,
-    TutorialsComponent
+    TutorialsComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
