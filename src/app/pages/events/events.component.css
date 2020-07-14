@@ -1,0 +1,52 @@
+.box {
+  position: relative;
+}
+.events .box .img-text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    top: 10%;
+    max-width: 750px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .transparent-layer {
+      background-color: rgba(241, 183, 13, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  
+  #events-img {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .events h2 {
+    font-weight: bolder;
+  }
+  
+  .events-section {
+    padding-top: 25px;
+  }
+  
+  /*when the width <= 450px*/
+  @media (max-width: 450px) {
+    .events .box .img-text {
+      font-size: 13px;
+    }
+  }
+  
+  /*when the width is >= 750px*/
+  @media (min-width: 750px) {
+    .events .box .img-text {
+      font-size: 25px;
+      font-weight: normal;
+    }
+  }
+  
