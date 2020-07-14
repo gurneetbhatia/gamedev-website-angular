@@ -8,3 +8,7 @@
 .albums img:hover {
     transform: scale(1.05);
 }
+
+.gallery {
+    padding-bottom: 100px;
+}
