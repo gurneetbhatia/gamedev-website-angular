@@ -12,6 +12,7 @@ import { EventsComponent } from './pages/events/events.component';
 import { EventCardComponent } from './pages/events/event-card.component';
 import { TutorialsComponent } from './pages/tutorials/tutorials.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
     EventsComponent,
     EventCardComponent,
     TutorialsComponent,
-    GalleryComponent
+    GalleryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

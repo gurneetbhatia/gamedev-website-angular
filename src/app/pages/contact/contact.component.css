@@ -1,0 +1,16 @@
+.contact-container {
+	padding-bottom: 150px;
+}
+.contact-container section {
+	background-color: snow;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#contact-message {
+  height: 150px;
+}
+
+a {
+    color: black;
+}
