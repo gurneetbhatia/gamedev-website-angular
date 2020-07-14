@@ -10,6 +10,14 @@
         </div>
     </div>
     <div class="container row">
-
+        <section align="center" id="upcoming-events" class="col-md events-section">
+            <h2>Upcoming Events</h2>
+            <div *ngFor="let event of events">
+                <app-event-card [event]="event"></app-event-card>
+            </div>
+        </section>
+        <section align="center" id="past-events" class="col-md events-section">
+            <h2>Past Events</h2>
+        </section>
     </div>
   </div>
