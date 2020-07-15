@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactModel } from './contact-model';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contactModel = new ContactModel();
+
+  readonly RECAPTCHA_SITE_KEY = "6LcrhOYUAAAAAPkMYoCKjkZm0lxuJJx4E19eJfIe";
+
+  constructor() {
+    this.contactModel.name = "";
+    this.contactModel.email = "";
+    this.contactModel.subject = "";
+    this.contactModel.message = "";
+  }
 
   ngOnInit(): void {
   }
