@@ -1,7 +1,11 @@
 <div id="home">
     <div id="home">
         <div class="box">
-          <img id="home-img" src='/assets/home_top.jpeg' alt="GameDev Logo"/>
+          <picture>
+            <source srcset="/assets/home_top.webp" type="image/webp">
+            <source srcset="/assets/home_top.jpeg" type="image/jpeg">
+            <img id="home-img" src="/assets/home_top.jpeg" alt="Home">
+          </picture>
         </div>
         <div id="about-us">
           <h1>About Us</h1>
@@ -23,13 +27,22 @@
           <h1>Meet the Team</h1>
           <div class="row">
             <div class="col-md team-member">
-              <img src="/assets/Diana_Dobrescu.jpg" alt="Diana Dobrescu"/>
+              <!--<img src="/assets/Diana_Dobrescu.webp" alt="Diana Dobrescu"/>-->
+              <picture>
+                <source srcset="/assets/Diana_Dobrescu.webp" type="image/webp">
+                <source srcset="/assets/Diana_Dobrescu.jpg" type="image/jpeg">
+                <img src="/assets/Diana_Dobrescu.jpg" alt="Diana Dobrescu">
+              </picture>
               <p class="member-name">Diana Dobrescu</p>
               <p class="member-role">Co-Director</p>
             </div>
 
             <div class="col-md team-member">
-              <img src="/assets/Gurneet_Bhatia.jpg" alt="Gurneet Bhatia"/>
+              <picture>
+                <source srcset="/assets/Gurneet_Bhatia.webp" type="image/webp">
+                <source srcset="/assets/Gurneet_Bhatia.jpg" type="image/jpeg">
+                <img src="/assets/Gurneet_Bhatia.jpg" alt="Gurneet Bhatia">
+              </picture>
                 <p class="member-name">Gurneet Bhatia</p>
                 <p class="member-role">Co-Director</p>
             </div>

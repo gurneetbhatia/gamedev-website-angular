@@ -33,11 +33,9 @@ export class ContactComponent implements OnInit {
     if (this.singleExecutionSubscription) {
       this.singleExecutionSubscription.unsubscribe();
     }
-    console.log("executing the subscription")
     this.singleExecutionSubscription = this.recaptchaService.execute("").subscribe(
       (token) => {
-        console.log("here")
-        console.log(token)
+        // handle the token and form here (post using the email service)
       },
       (error) => {
         console.log(error)
