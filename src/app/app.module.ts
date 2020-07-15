@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,10 +32,13 @@ import { ContactComponent } from './pages/contact/contact.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    RecaptchaV3Module,
     ToastrModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LeFqrEZAAAAAFaeC-LRXpAA_HnyxaYBjywNIvRQ' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

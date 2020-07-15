@@ -1,16 +1,11 @@
+
 <div class='container contact-container'>
     <section class='my-5 contact-section'>
         <h2 class='h1-responsive font-weight-bold textcenter my-5'>Contact Us</h2>
         <p class="text-center w-responsive mx-auto mb-5">If you have any questions about what we do, our events or sponsorship, please do get in touch!</p>
         <div class="row">
             <div class="col-md-9 mb-md-0 mb-5">
-                <form #contactForm="ngForm">
-                  <div #recaptchDiv class="g-recaptcha"
-                        [attr.data-sitekey]="RECAPTCHA_SITE_KEY"
-                        data-size="invisible"
-                        data-callback="onSubmit">
-
-                  </div>
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                     <div class="row">
                         <div class="col-md-6">
                           <div class="md-form mb-0">

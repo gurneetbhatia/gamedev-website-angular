@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ReCaptchaV3Service, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
+
 import { ContactModel } from './contact-model';
+import { NotificationService } from 'src/app/shared/notification.service';
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
@@ -10,9 +14,12 @@ export class ContactComponent implements OnInit {
 
   contactModel = new ContactModel();
 
-  readonly RECAPTCHA_SITE_KEY = "6LcrhOYUAAAAAPkMYoCKjkZm0lxuJJx4E19eJfIe";
+  private singleExecutionSubscription: Subscription;
 
-  constructor() {
+  constructor(
+    private recaptchaService: ReCaptchaV3Service,
+    private notificationService: NotificationService
+  ) {
     this.contactModel.name = "";
     this.contactModel.email = "";
     this.contactModel.subject = "";
@@ -20,6 +27,22 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm) {
+    if (this.singleExecutionSubscription) {
+      this.singleExecutionSubscription.unsubscribe();
+    }
+    console.log("executing the subscription")
+    this.singleExecutionSubscription = this.recaptchaService.execute("").subscribe(
+      (token) => {
+        console.log("here")
+        console.log(token)
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
   }
 
 }
