@@ -4,7 +4,7 @@
         <p class="text-center w-responsive mx-auto mb-5">If you have any questions about what we do, our events or sponsorship, please do get in touch!</p>
         <div class="row">
             <div class="col-md-9 mb-md-0 mb-5">
-                <form>
+                <form #contactForm>
                     <div class="row">
                         <div class="col-md-6">
                           <div class="md-form mb-0">
@@ -36,7 +36,7 @@
                         </div>
                   </div>
                   <div class="text-center text-md-right">
-                      <button type="submit" class="btn btn-primary btn-md">Send</button>
+                      <button [disabled]="!contactForm.valid" type="submit" class="btn btn-primary btn-md">Send</button>
                     </div>
                 </form>
             </div>
