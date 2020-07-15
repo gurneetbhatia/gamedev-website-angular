@@ -22,7 +22,7 @@ export class EmailService {
       private notificationService: NotificationService
     ) { }
 
-  sendEmail(contactForm: ContactModel, recaptcha: any) {
+  sendEmail(contactForm: ContactModel, recaptcha: string) {
     return this.http.post('https://unicsmcr.com/.netlify/functions/email',
                           JSON.stringify({
                             name: contactForm.name,
