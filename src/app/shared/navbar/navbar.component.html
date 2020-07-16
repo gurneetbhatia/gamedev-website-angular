@@ -1,28 +1,28 @@
 <nav class="navbar navbar-expand-md special-color-dark navbar-dark">
     <a class="navbar-brand" [routerLink]="['/']">UniCS GameDev</a>
-    <button id="navbar-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Open Menu">
+    <button (click)="navbarButtonClicked()" id="navbar-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Open Menu">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/']">Home</a>
+                <a class="nav-link" [routerLink]="['/']" (click)="collapseNavbar()">Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/events']">Events</a>
+                <a class="nav-link" [routerLink]="['/events']" (click)="collapseNavbar()">Events</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/tutorials']">Tutorials</a>
+                <a class="nav-link" [routerLink]="['/tutorials']" (click)="collapseNavbar()">Tutorials</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/gallery']">Gallery</a>
+                <a class="nav-link" [routerLink]="['/gallery']" (click)="collapseNavbar()">Gallery</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+                <a class="nav-link" [routerLink]="['/contact']" (click)="collapseNavbar()">Contact</a>
             </li>
         </ul>
     </div>

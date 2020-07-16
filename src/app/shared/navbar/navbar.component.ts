@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  open: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  navbarButtonClicked() {
+    this.open = !this.open;
+  }
+
+  collapseNavbar() {
+    if (this.open) {
+      document.getElementById('navbar-button').click();
+    }
   }
 
 }
